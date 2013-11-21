@@ -1,7 +1,8 @@
 <h1>projects</h1>
 <ul>
   <% @projects.each_with_index do |hoge| %>
-    <li><%= link_to hoge.title, project_path(hoge.id) %></li>
+    <li><%= link_to hoge.title, project_path(hoge.id) %>
+    <%= link_to '[Edit]', edit_project_path(hoge.id) %></li>
   <% end %>
 </ul>
 <p>
