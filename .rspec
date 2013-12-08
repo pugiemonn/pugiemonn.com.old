@@ -1,0 +1,5 @@
+--color
+--format documentation
+--profile
+--fail-fast
+--tag ~slow
