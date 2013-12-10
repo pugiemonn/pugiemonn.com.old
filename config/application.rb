@@ -20,6 +20,8 @@ module PugiemonnComV0
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :ja
 
+    config.enforce_available_locales = [:ja, :en]
+
     # Generators Configure
     config.generators do |g|
       g.test_framework :rspec, view_specs: false
