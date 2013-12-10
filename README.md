@@ -5,8 +5,7 @@ pugiemonn.com
 This is pugiemonn.com repository.  
   
 pugiemonn.com's mission is to change the world.  
-Easier to communicate and collaborate your friends such like doorkeeper or mixi.
-
+Like Doorkeeper or Mixi, it makes communicating and collaborating with your friends easier.
 
 # Introduction
 test
