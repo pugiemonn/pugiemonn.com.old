@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    models:
+    flash:
+      message: 入力してください
+      
