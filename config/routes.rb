@@ -1,13 +1,15 @@
 PugiemonnComV0::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  
+
   resources :projects do
-    resources :tasks, only: [:create, :destroy]
+    resources :tasks, only: [:create, :destroy] do
+      member do
+        post :toggle
+      end
+    end
   end
 
-  post '/projects/:project_id/tasks/:id/toggle' => 'tasks#toggle'
-  
   root 'projects#index'
 
 
