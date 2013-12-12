@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      project: プロジェクト
+    attributes:
+      project:
+        id: ID
+        title: タイトル
+        created_at: 登録日
+        updated_at: 更新
