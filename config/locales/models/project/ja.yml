@@ -8,3 +8,5 @@ ja:
         title: タイトル
         created_at: 登録日
         updated_at: 更新
+    flash:
+      message: 入力してください
