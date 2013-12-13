@@ -1,12 +1,10 @@
 ja:
   activerecord:
     models:
-      project: プロジェクト
+      task: プロジェクト
     attributes:
-      project:
+      task:
         id: ID
         title: タイトル
         created_at: 登録日
         updated_at: 更新
-    flash:
-      message: 入力してください
