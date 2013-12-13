@@ -2,8 +2,8 @@
   <p> 
     <%= f.label :title, t(".title") %><Br>
     <%= f.text_field :title %>
-    <% if @project.errors.any? %>
-      <%= @project.errors.messages[:title][0] %>
+    <% @project.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
     <% end %>
   </p>
   <p> 
