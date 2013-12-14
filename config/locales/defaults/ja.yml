@@ -209,6 +209,7 @@ ja:
       password_confirmation: 確認用パスワード
       sign_up_title: ユーザー登録
       sign_in_title: ユーザーログイン
+      sign_out_title: ログアウト
     registrations:
       new:
     confirmations:
