@@ -202,3 +202,14 @@ ja:
   projects:
     form:
       title: タイトル
+  devise:
+    index:
+      mail: メール
+      password: パスワード
+      password_confirmation: 確認用パスワード
+      sign_up_title: ユーザー登録
+      sign_in_title: ユーザーログイン
+    registrations:
+      new:
+    confirmations:
+      new:
