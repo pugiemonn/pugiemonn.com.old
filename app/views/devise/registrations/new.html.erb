@@ -11,7 +11,7 @@
   <div><%= f.label :password_confirmation, t("desive.index.password_confirmation") %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up", t("devise.index.sign_up_title") %></div>
+  <div><%= f.submit t("devise.index.sign_up_title") %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
