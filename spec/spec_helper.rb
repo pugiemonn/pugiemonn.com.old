@@ -49,9 +49,6 @@ RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation#, { except: %w[] }
     DatabaseCleaner.clean_with(:truncation)
-  end
-
-  config.before(:all) do
     FactoryGirl.reload
   end
 
@@ -61,8 +58,5 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
-  end
-
-  config.after(:suite) do
   end
 end
