@@ -1,4 +1,4 @@
 class Project < ActiveRecord::Base
   has_many :tasks
-  validates :title, presence: true, length: { minimum: 3 }
+  validates :title, presence: true, length: { minimum: 3, maximum: 255 }
 end
