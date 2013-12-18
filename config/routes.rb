@@ -12,6 +12,7 @@ PugiemonnComV0::Application.routes.draw do
   end
 
   root 'projects#index'
+  resources :communities
 
 
   # You can have the root of your site routed with "root"
