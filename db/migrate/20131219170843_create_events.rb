@@ -8,7 +8,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :venue_url
       t.string :venue_address
       t.boolean :done
-      t.dateitme :start_time
+      t.datetime :start_time
       t.datetime :end_time
       t.references :community, index: true
 

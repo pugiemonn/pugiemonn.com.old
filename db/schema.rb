@@ -11,13 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131218131448) do
+ActiveRecord::Schema.define(version: 20131219170843) do
 
   create_table "communities", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "members_limit"
+    t.string   "venue"
+    t.string   "venue_url"
+    t.string   "venue_address"
+    t.boolean  "done"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.integer  "community_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["community_id"], name: "index_events_on_community_id"
 
   create_table "projects", force: true do |t|
     t.string   "title"
