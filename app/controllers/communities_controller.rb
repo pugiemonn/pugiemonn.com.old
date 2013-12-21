@@ -15,6 +15,12 @@ class CommunitiesController < ApplicationController
       render 'new'
     end
   end
+
+  def show
+
+  end
+
+
   private
     def community_params
       params[:community].permit(:name)

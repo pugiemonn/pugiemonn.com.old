@@ -1,7 +1,12 @@
 <h1>Communities</h1>
 <ul>
-  <%= @communities.each do |community| %>
-    <li><%= community.name %></li>
+  <% @communities.each_with_index do |community| %>
+    <li>
+      <%= link_to community_path(community.id) do  %>
+        <%= community.id %>
+        <%= community.name %>
+      <% end %>
+    </li>
   <% end %>
 </ul>
 <%= link_to t(".create_community"), new_community_path %>
