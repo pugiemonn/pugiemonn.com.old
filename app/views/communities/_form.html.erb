@@ -1,0 +1,10 @@
+<%#= debug(@community) %>
+<%= form_for @community do |f| %>
+  <p> 
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p> 
+    <%= f.submit %>
+  </p>
+<% end %>

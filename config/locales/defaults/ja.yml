@@ -214,3 +214,6 @@ ja:
       new:
     confirmations:
       new:
+  communities:
+    index:
+      create_community: コミュニティを作る

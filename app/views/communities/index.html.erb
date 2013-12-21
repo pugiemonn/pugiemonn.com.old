@@ -2,5 +2,6 @@
 <ul>
   <%= @communities.each do |community| %>
     <li><%= community.name %></li>
-<% end %>
+  <% end %>
 </ul>
+<%= link_to t(".create_community"), new_community_path %>
