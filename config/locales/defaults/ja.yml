@@ -216,6 +216,6 @@ ja:
       new:
   communities:
     index:
+      title: コミュニティ一覧
       create_community: コミュニティを作る
     show:
-      community_index: コミュニティ一覧
