@@ -217,3 +217,5 @@ ja:
   communities:
     index:
       create_community: コミュニティを作る
+    show:
+      community_index: コミュニティ一覧
