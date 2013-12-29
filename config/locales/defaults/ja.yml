@@ -219,3 +219,9 @@ ja:
       title: コミュニティ一覧
       create_community: コミュニティを作る
     show:
+  events:
+    index:
+      title: イベント一覧
+  top:
+    index:
+      title: トップ
