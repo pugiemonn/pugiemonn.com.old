@@ -222,6 +222,8 @@ ja:
   events:
     index:
       title: イベント一覧
+      create_event: イベントを作る
+    new:
   top:
     index:
       title: トップ
