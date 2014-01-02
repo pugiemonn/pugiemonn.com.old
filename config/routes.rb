@@ -11,7 +11,7 @@ PugiemonnComV0::Application.routes.draw do
     end
   end
 
-  root 'top#index'
+  root 'home#index'
   resources :communities
   resources :events
 
