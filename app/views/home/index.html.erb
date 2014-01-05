@@ -1,5 +1,14 @@
 <h1>pugiemonn.com</h1>
 <div>
+  <%= form_for @event do |f| %>
+    <p>
+      <%= f.label :description, t(".event") %><br>
+      <%= f.text_area :description %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
   <%= link_to t("communities.index.title"), communities_path %> / 
   <%= link_to t("events.index.title"), events_path %>
 </div>
