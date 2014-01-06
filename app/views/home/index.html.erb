@@ -9,6 +9,9 @@
       <%= f.submit %>
     </p>
   <% end %>
+  <% @events.each_with_index do |event| %>
+    <div><%= event.description %> <%= event.created_at %></div>
+  <% end %>
   <%= link_to t("communities.index.title"), communities_path %> / 
   <%= link_to t("events.index.title"), events_path %>
 </div>
