@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
     @event  = Event.new
-    @events = Event.all
+    @events = Event.order("id DESC").limit(10)
   end
 end
