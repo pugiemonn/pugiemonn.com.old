@@ -11,12 +11,23 @@ body {
   @include pt(70px);
 }
 
+ul {
+  @include p(0);
+}
 
-.event-post {
-  @include p(20px);
+li {
+  @extend .lis-n;
+}
+
+.event-list {
   @extend .wob-ba;
-  &:hover {
-    @include bgc(#EEE);
+  @extend .cur-p;
+  .event-link {
+    @include p(20px);
+    @extend .d-b;
+    &:hover {
+      @include bgc(#EEE);
+    }
   }
 }
 

@@ -9,16 +9,20 @@
       <%= f.submit %>
     </p>
   <% end %>
-  <% @events.each_with_index do |event| %>
-    <div class="event-post">
-      <div class="event-post-date pull-right">
-        <%= event.created_at %>
-      </div>
-      <div class="event-post-content">
-        <%= event.description %>
-      </div>
-    </div>
-  <% end %>
-  <%= link_to t("communities.index.title"), communities_path %> / 
+  <ul>
+    <% @events.each_with_index do |event| %>
+      <li class="event-list">
+        <%=	link_to event_path(event), class: "event-link" do %>
+          <span class="event-post-date pull-right">
+            <%= event.created_at %>
+          </span>
+          <span class="event-post-content">
+            <%= event.description %>
+          </span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to t("communities.index.title"), communities_path %> /
   <%= link_to t("events.index.title"), events_path %>
 </div>
