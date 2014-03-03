@@ -3,4 +3,7 @@
   <%= @event.description %>
   <span><%= @event.created_at %></span>
 </p>
+<%= link_to event_path(@event), class: "btn btn-block btn-lg btn-primary", remote: true do %>
+  参加
+<% end %>
 
