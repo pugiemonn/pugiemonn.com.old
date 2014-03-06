@@ -14,7 +14,7 @@ PugiemonnComV0::Application.routes.draw do
   root 'home#index'
   resources :communities
   resources :events
-
+  resources :eventattendance
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
