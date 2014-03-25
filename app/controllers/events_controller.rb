@@ -18,7 +18,11 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    @event      = Event.find(params[:id])
+
+    if user_signed_in?
+      @attendance = Eventattendance.new(event: @event, user: current_user)
+    end
   end
 
   private

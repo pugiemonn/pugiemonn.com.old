@@ -4,8 +4,12 @@
   <span><%= @event.created_at %></span>
 </p>
 <% if user_signed_in? %>
-  <%= link_to event_path(@event), class: "btn btn-block btn-lg btn-primary", remote: true do %>
-    参加
+  <%= form_for(@attendance, remote: true) do |f| %>
+    <p>
+      <%= f.hidden_field :event_id %>
+      <%= f.hidden_field :user_id %>
+      <%= button_tag "参加", class: "btn btn-block btn-lg btn-primary", type: "submit" %>
+    </p>
   <% end %>
 <% else %>
   <%= link_to new_user_session_path, class: "btn btn-block btn-lg btn-primary" do %>
