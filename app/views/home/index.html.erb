@@ -1,13 +1,13 @@
 <h1>pugiemonn.com</h1>
 <div>
   <%= form_for @event do |f| %>
-    <p>
+    <div class="event-desc-textarea-box">
       <%= f.label :description, t(".event") %><br>
-      <%= f.text_area :description %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
+      <%= f.text_area :description, class: "event-desc-textarea" %>
+      <div class="event-desc-submit-box clearfix">
+        <%= f.submit("投稿", class: "pull-right") %>
+      </div>
+    </div>
   <% end %>
   <ul>
     <% @events.each_with_index do |event| %>

@@ -7,6 +7,8 @@ $navbar-default-bg: #312312;
 @import "bootstrap-custom"; // これを読み込む前に定数を上書きするぷぎー
 @import "basic", "mixin", "extend";
 
+$w1 : 20px;
+
 body {
   @include pt(70px);
 }
@@ -37,5 +39,14 @@ li {
 
 .event-post-content {
 
+}
+
+.event-desc-textarea-box {
+  @include maw($w1 * 30);
+  @include mb($w1 / 2);
+  .event-desc-textarea {
+    @include w(100%);
+    @include mb($w1 / 2);
+  }
 }
 
