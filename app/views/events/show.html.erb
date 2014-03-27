@@ -8,14 +8,24 @@
     <p>
       <%= f.hidden_field :event_id %>
       <%= f.hidden_field :user_id %>
-      <%= button_tag "参加", class: "btn btn-block btn-lg btn-primary", type: "submit" %>
+      <%= button_tag t".attendance", class: "btn btn-block btn-lg btn-primary", type: "submit" %>
     </p>
   <% end %>
 <% else %>
   <%= link_to new_user_session_path, class: "btn btn-block btn-lg btn-primary" do %>
-    ログインして参加する
+    <%= t".login_and_attend" %>
   <% end %>
 <% end %>
+<%#= debug @event.eventattendance %>
+<h3><%= t".attendances" %>（<%= @event.eventattendances.count %>）</h3>
+<ul class="event-attendance-lists">
+  <% @event.eventattendances.each do |e| %>
+    <li class="event-attendance-item">
+      <%= e.user.id %>
+    </li>
+  <% end %>
+</ul>
+<h3><%= t".comment" %></h3>
 <ul class="event-items">
   <li class="event-item"><span class="text">イベント楽しみです</span><span class="fullname">ぷぎえもん</span></li>
   <li class="event-item"><span class="text">イベント楽しみです</span><span class="fullname">ぷぎえもん</span></li>
