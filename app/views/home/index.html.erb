@@ -1,28 +1,30 @@
-<h1>pugiemonn.com</h1>
-<div>
-  <%= form_for @event do |f| %>
-    <div class="event-desc-textarea-box">
-      <%= f.label :description, t(".event") %><br>
-      <%= f.text_area :description, class: "event-desc-textarea" %>
-      <div class="event-desc-submit-box clearfix">
-        <%= f.submit("投稿", class: "pull-right") %>
+<article id="home">
+  <h1><%= t".title1" %></h1>
+  <div>
+    <%= form_for @event do |f| %>
+      <div class="event-desc-textarea-box">
+        <%= f.label :description, t(".event") %><br>
+        <%= f.text_area :description, class: "event-desc-textarea" %>
+        <div class="event-desc-submit-box clearfix">
+          <%= f.submit t("helpers.submit.post"), class: "btn btn-block btn-lg btn-info pull-right" %>
+        </div>
       </div>
-    </div>
-  <% end %>
-  <ul>
-    <% @events.each_with_index do |event| %>
-      <li class="event-list">
-        <%=	link_to event_path(event), class: "event-link" do %>
-          <span class="event-post-date pull-right">
-            <%= event.created_at %>
-          </span>
-          <span class="event-post-content">
-            <%= event.description %>
-          </span>
-        <% end %>
-      </li>
     <% end %>
-  </ul>
-  <%= link_to t("communities.index.title"), communities_path %> /
-  <%= link_to t("events.index.title"), events_path %>
-</div>
+    <ul>
+      <% @events.each_with_index do |event| %>
+        <li class="event-list">
+          <%= link_to event_path(event), class: "event-link" do %>
+            <span class="event-post-date pull-right">
+              <%= event.created_at %>
+            </span>
+            <span class="event-post-content">
+              <%= event.description %>
+            </span>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+    <%= link_to t("communities.index.title"), communities_path %> /
+    <%= link_to t("events.index.title"), events_path %>
+  </div>
+</article>

@@ -134,6 +134,7 @@ ja:
       create: 登録する
       submit: 保存する
       update: 更新する
+      post: 投稿する
   number:
     currency:
       format:
@@ -224,7 +225,3 @@ ja:
       title: イベント一覧
       create_event: イベントを作る
     new:
-  home:
-    index:
-      title: トップ
-      event: イベント
