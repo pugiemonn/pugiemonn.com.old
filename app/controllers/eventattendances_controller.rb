@@ -23,7 +23,7 @@ class EventattendancesController < ApplicationController
 
   private
   def eventattendance_params
-    params[:eventattendance].permit(:event_id, :user_id)
+    params[:eventattendance].permit(:event_id, :user_id, :status)
   end
 
 end
