@@ -1,0 +1,11 @@
+<h1><%= t".profile" %></h1>
+  <% if user_signed_in? %>
+    <%= current_user.profile.name %>
+  <% else %>
+  <% end %>
+<div>
+  <%= link_to t(".create_event"), new_event_path %>
+</div>
+<div>
+  <%= link_to t("home.index.title"), root_path %>
+</div>

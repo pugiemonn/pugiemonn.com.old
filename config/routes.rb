@@ -13,6 +13,7 @@ PugiemonnComV0::Application.routes.draw do
 
   root 'home#index'
   resources :communities
+  resources :profiles
   resources :events do
   end
   resources :eventattendances do
