@@ -4,13 +4,14 @@
   <span><%= @event.created_at %></span>
 </p>
 <% if user_signed_in? %>
-  <% if @event.eventattendances.map{ |l| l[:status] == 1 } %>
+  <% if @event.eventattendances.count > 0 && @event.eventattendances.map{ |l| l[:status] == 1 } %>
+    <p class="alert alert-info"><%= t".attendance_message" %></p>
   <% else %>
     <%= form_for(@attendance, remote: true) do |f| %>
       <p>
         <%= f.hidden_field :event_id %>
         <%= f.hidden_field :user_id %>
-        <%= f.hidden_field :status, value: "1" %>
+        <%= f.hidden_field :status, value: 1 %>
         <%= button_tag t(".attendance"), class: "btn btn-block btn-lg btn-primary", type: "submit" %>
       </p>
     <% end %>
