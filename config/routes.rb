@@ -13,6 +13,7 @@ PugiemonnComV0::Application.routes.draw do
 
   root 'home#index'
   resources :communities
+  resources :home, controller: 'mypage', only: %w(index)
   resources :profiles
   resources :events do
   end
