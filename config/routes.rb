@@ -16,6 +16,8 @@ PugiemonnComV0::Application.routes.draw do
   resources :home, controller: 'mypage', only: %w(index)
   resources :profiles
   resources :events do
+    resources :members, :only => %w(index new create edit update), controller: 'events/members' do
+    end
   end
   resources :eventattendances do
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140318142015) do
+ActiveRecord::Schema.define(version: 20140405090804) do
 
   create_table "communities", force: true do |t|
     t.string   "name"
@@ -43,9 +43,32 @@ ActiveRecord::Schema.define(version: 20140318142015) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "flag"
+    t.integer  "user_id"
   end
 
   add_index "events", ["community_id"], name: "index_events_on_community_id"
+  add_index "events", ["user_id"], name: "index_events_on_user_id"
+
+  create_table "members", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "members", ["event_id", "user_id"], name: "index_members_on_event_id_and_user_id", unique: true
+
+  create_table "profiles", force: true do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.integer  "sex"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
 
   create_table "projects", force: true do |t|
     t.string   "title"
