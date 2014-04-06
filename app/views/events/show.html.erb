@@ -4,15 +4,15 @@
   <span><%= @event.created_at %></span>
 </p>
 <% if user_signed_in? %>
-  <% if @event.eventattendances.count > 0 && @event.eventattendances.map{ |l| l[:status] == 1 } %>
-    <p class="alert alert-info"><%= t".attendance_message" %></p>
+  <% if @event.members.count > 0 && @event.members.map{ |l| l[:status] == 1 } %>
+    <p class="alert alert-success"><%= t".attendance_message" %></p>
   <% else %>
-    <%= form_for(@attendance, remote: true) do |f| %>
+    <%= form_for([@event, @member]) do |f| %>
       <p>
         <%= f.hidden_field :event_id %>
         <%= f.hidden_field :user_id %>
         <%= f.hidden_field :status, value: 1 %>
-        <%= button_tag t(".attendance"), class: "btn btn-block btn-lg btn-primary", type: "submit" %>
+        <%= button_tag t(".attendance"), class: "btn btn-block btn-lg btn-primary", type: "submit" %>          aaa
       </p>
     <% end %>
   <% end %>
@@ -21,9 +21,9 @@
     <%= t".login_and_attend" %>
   <% end %>
 <% end %>
-<h3><%= t".attendances" %>（<%= @event.eventattendances.count %>）</h3>
+<h3><%= t".attendances" %>（<%= @event.members.count if @member.present? %>）</h3>
 <ul class="event-attendance-lists">
-  <% @event.eventattendances.each do |e| %>
+  <% @event.members.each do |e| %>
     <li class="event-attendance-item">
       <%= e.user.profile.name %>
     </li>

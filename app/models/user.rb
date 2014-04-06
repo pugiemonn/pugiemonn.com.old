@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
   has_one  :profile
   has_many :communities
   has_many :events
-  has_many :eventattendances
+  has_many :members
 end
