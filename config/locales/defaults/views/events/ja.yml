@@ -8,6 +8,6 @@ ja:
       absence: 欠席
       attendance: 参加
       attendance_message: あなたはイベントに参加しています。
-      attendances: 参加者
+      attend_members: 参加者
       comment: コメント
       login_and_attend: ログインして参加する

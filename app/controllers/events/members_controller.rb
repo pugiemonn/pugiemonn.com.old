@@ -9,8 +9,11 @@ class Events::MembersController < ApplicationController
     logger.debug(@member)
 
     if @member.save
+      respond_to do |format|
+        format.js
+      end
     else
-      redirect_to root_path
+#      redirect_to root_path
     end
 
   end
