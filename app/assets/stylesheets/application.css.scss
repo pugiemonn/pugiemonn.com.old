@@ -2,33 +2,36 @@
 // http://getbootstrap.com/customize/#less-variables
 
 // 定数上書きする場所ぷぎー
-$navbar-default-bg: #312312;
+$navbar-default-bg : #312312;
 
 @import "bootstrap-custom"; // これを読み込む前に定数を上書きするぷぎー
-@import "basic", "mixin", "extend";
 
-$w1 : 20px;
+$width1 : 20px;
 
 body {
-  @include pt(70px);
+  padding-top: 70px;
+}
+
+h1 {
 }
 
 ul {
-  @include p(0);
+  padding: 0;
 }
 
 li {
-  @extend .lis-n;
+  list-style: none;
 }
 
 .event-list {
-  @extend .wob-ba;
-  @extend .cur-p;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  cursor: pointer;
   .event-link {
-    @include p(20px);
-    @extend .d-b;
+    padding: 20px;
+    display: block;
     &:hover {
-      @include bgc(#EEE);
+      background-color: #eeeeee;
     }
   }
 }
@@ -42,11 +45,11 @@ li {
 }
 
 .event-desc-textarea-box {
-  @include maw($w1 * 30);
-  @include mb($w1 / 2);
+  max-width: $width1 * 30;
+  margin-bottom: $width1 / 2;
   .event-desc-textarea {
-    @include w(100%);
-    @include mb($w1 / 2);
+    width: 100%;
+    margin-bottom: $width1 / 2;
   }
 }
 
