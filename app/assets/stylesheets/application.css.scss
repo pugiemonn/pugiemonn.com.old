@@ -23,6 +23,51 @@ li {
   list-style: none;
 }
 
+.timeline {
+  background-color: #eeeeee;
+  padding: 10px 0;
+  position: relative;
+}
+.timeline:before {
+  background-color: #DDD;
+  bottom: 0;
+  content: '';
+  left: 15px;
+  position: absolute;
+  top: 10px;
+  width: 1px;
+  z-index: 0;
+}
+
+  .timeline-item__icon {
+    background-color: #56C9F9;
+    border-radius: 10px;
+    margin-top: 10px;
+    left: 0;
+    position: absolute;
+  }
+
+  .timeline-item__block {
+    background-color: #FFF;
+    border-radius: 4px;
+    display: block;
+    margin: 0 10px 5px 60px;
+    padding: 15px;
+    position: relative;
+  }
+
+    .timeline-item__arrow {
+      border-right: 8px solid #fff !important;
+      border-bottom: 8px solid transparent;
+      border-top: 8px solid transparent;
+      display: block;
+      height: 0;
+      left: -7px;
+      position: absolute;
+      top: 13px;
+      width: 0;
+    }
+
 .event-list {
   -ms-word-break: break-all;
   word-break: break-all;

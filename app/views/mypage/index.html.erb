@@ -5,51 +5,32 @@
   <header>
     <h1><%= current_user.profile.name %><%= t".mypage" %></h1>
   </header>
-  <section>
-    <ul class="nav nav-tabs" id="js-tab">
-      <li class="active"><a href="#js-tab__event-future" data-toggle="tab"><%= t('.event_future') %></a></li>
-      <li><a href="#js-tab__event-past" data-toggle="tab"><%= t('.event_past') %></a></li>
-    </ul>
-    <div class="tab-content">
-      <div class="tab-pane active" id="js-tab__event-future">
-eve
-        <ul class="event-list">
-          <li class="event__item"></li>
-        </ul>
-      </div>
-      <div class="tab-pane" id="js-tab__event-past">
-eve past
-      </div>
-    </div>
-  </section>
 </article>
 <article id="mypage">
-  <h1><%= t".title1" %></h1>
-  <div>
-    <% if @events.count > 0 %>
-      <ul>
+  <h1><%= t".event_past" %></h1>
+    <div class="timeline">
+      <% if @events.count > 0 %>
         <% @events.each_with_index do |event| %>
-          <li class="event-list">
-            <%= link_to event_path(event), class: "event-link" do %>
-              <span class="event-post-date pull-right">
-                <%= event.created_at %>
-              </span>
-              <span class="event-post-content">
-                <%= event.description %>
-              </span>
-            <% end %>
-          </li>
+          <div class="timeline-item">
+            <span class="timeline-item__icon">(╹◡╹)</span>
+            <span class="timeline-item__block">
+              <span class="timeline-item__arrow"></span>
+              <%= link_to event_path(event), class: 'event-link' do %>
+                <span class="timeline-item__title">
+                  <%= event.title %>
+                </span>
+                <span class="timeline-item__date">
+                  <%= event.created_at %>
+                </span>
+                <span class="timeline-item__text">
+                  <%= event.description %>
+                </span>
+              <% end %>
+            </span>
+          </div>
         <% end %>
-      </ul>
-    <% end %>
+      <% end %>
+    </div>
     <%= link_to t("communities.index.title"), communities_path %> /
     <%= link_to t("events.index.title"), events_path %>
-  </div>
 </article>
-<%= content_for :javascript do %>
-  <%= javascript_tag do %>
-    $(function () {
-    $('#myTab a:last').tab('show');
-    })
-  <% end %>
-<% end %>
