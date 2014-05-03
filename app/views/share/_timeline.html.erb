@@ -1,0 +1,21 @@
+<div class="timeline">
+  <% if @events.count > 0 %>
+    <% @events.each_with_index do |event| %>
+      <div class="timeline-item">
+        <span class="timeline-item__icon">(╹◡╹)</span>
+        <%= link_to event_path(event), class: 'timeline-item__block' do %>
+          <span class="timeline-item__arrow"></span>
+          <span class="timeline-item__title">
+            <%= event.title %>
+          </span>
+          <span class="timeline-item__date">
+            <%= event.created_at %>
+          </span>
+          <span class="timeline-item__text">
+            <%= event.description %>
+          </span>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

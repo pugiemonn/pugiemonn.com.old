@@ -13,20 +13,7 @@
         </div>
       <% end %>
     <% end %>
-    <ul>
-      <% @events.each_with_index do |event| %>
-        <li class="event-list">
-          <%= link_to event_path(event), class: "event-link" do %>
-            <span class="event-post-date pull-right">
-              <%= event.created_at %>
-            </span>
-            <span class="event-post-content">
-              <%= event.description %>
-            </span>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
+    <%= render partial: 'share/timeline' %>
     <%= link_to t("communities.index.title"), communities_path %> /
     <%= link_to t("events.index.title"), events_path %>
   </div>
