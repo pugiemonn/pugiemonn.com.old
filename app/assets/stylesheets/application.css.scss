@@ -28,11 +28,12 @@ li {
   padding: 10px 0;
   position: relative;
 }
+
 .timeline:before {
   background-color: #DDD;
   bottom: 0;
   content: '';
-  left: 15px;
+  left: 25px;
   position: absolute;
   top: 10px;
   width: 1px;
@@ -43,7 +44,7 @@ li {
     background-color: #56C9F9;
     border-radius: 10px;
     margin-top: 10px;
-    left: 0;
+    left: 10px;
     position: absolute;
   }
 
