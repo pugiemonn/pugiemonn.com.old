@@ -54,6 +54,9 @@ li {
     margin: 0 10px 5px 60px;
     padding: 15px;
     position: relative;
+    &:hover {
+      text-decoration: none;
+    }
   }
 
     .timeline-item__arrow {
@@ -66,6 +69,10 @@ li {
       position: absolute;
       top: 13px;
       width: 0;
+    }
+
+    .timeline-item__text {
+      color: #000;
     }
 
 .event-list {
