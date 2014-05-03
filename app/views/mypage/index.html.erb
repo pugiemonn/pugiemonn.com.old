@@ -6,23 +6,29 @@
     <h1><%= current_user.profile.name %><%= t".mypage" %></h1>
   </header>
   <section>
-    <ul class="nav nav-tabs" id="myTab">
-      <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-      <li><a href="#profile" data-toggle="tab">Profile</a></li>
+    <ul class="nav nav-tabs" id="js-tab">
+      <li class="active"><a href="#js-tab__event-future" data-toggle="tab"><%= t('.event_future') %></a></li>
+      <li><a href="#js-tab__event-past" data-toggle="tab"><%= t('.event_past') %></a></li>
     </ul>
-    <!-- Tab panes -->
     <div class="tab-content">
-        <div class="tab-pane active" id="home">home</div>
-        <div class="tab-pane" id="profile">profile</div>
+      <div class="tab-pane active" id="js-tab__event-future">
+eve
+        <ul class="event-list">
+          <li class="event__item"></li>
+        </ul>
+      </div>
+      <div class="tab-pane" id="js-tab__event-past">
+eve past
+      </div>
     </div>
   </section>
 </article>
 <article id="mypage">
   <h1><%= t".title1" %></h1>
   <div>
-    <% if @owner_events.count > 0 %>
+    <% if @events.count > 0 %>
       <ul>
-        <% @owner_events.each_with_index do |event| %>
+        <% @events.each_with_index do |event| %>
           <li class="event-list">
             <%= link_to event_path(event), class: "event-link" do %>
               <span class="event-post-date pull-right">
