@@ -2,6 +2,7 @@ ja:
   mypage:
     index:
       event: イベント
+      event_future: 未来のイベント
+      event_past: 過去のイベント
       mypage: さんのマイページ
       title: トップ
-      title1: 楽しいイベントを作ろう
