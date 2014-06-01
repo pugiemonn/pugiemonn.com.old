@@ -9,3 +9,7 @@ Like Doorkeeper or Mixi, it makes communicating and collaborating with your frie
 
 # Introduction
 test
+
+# Theme Color
+green
+
