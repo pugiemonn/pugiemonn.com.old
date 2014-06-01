@@ -31,17 +31,16 @@ li {
   background-color: #eeeeee;
   padding: 10px 0;
   position: relative;
-}
-
-.timeline:before {
-  background-color: #DDD;
-  bottom: 0;
-  content: '';
-  left: 25px;
-  position: absolute;
-  top: 10px;
-  width: 1px;
-  z-index: 0;
+  &:before {
+    background-color: #DDD;
+    bottom: 0;
+    content: '';
+    left: 25px;
+    position: absolute;
+    top: 10px;
+    width: 1px;
+    z-index: 0;
+  }
 }
 
   .timeline-item__icon {
@@ -108,4 +107,3 @@ li {
     margin-bottom: $width1 / 2;
   }
 }
-
