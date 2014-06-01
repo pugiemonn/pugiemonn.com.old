@@ -6,7 +6,7 @@
         <%= link_to event_path(event), class: 'timeline-item__block' do %>
           <span class="timeline-item__arrow"></span>
           <span class="timeline-item__title">
-            <%= event.title %>
+            <%= (event.title == "") ? event.title : t(".event") %>
           </span>
           <span class="timeline-item__date">
             <%= event.created_at %>
