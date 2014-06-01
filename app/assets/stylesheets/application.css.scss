@@ -23,6 +23,10 @@ li {
   list-style: none;
 }
 
+.btn {
+  max-width: $width1 * 27;
+}
+
 .timeline {
   background-color: #eeeeee;
   padding: 10px 0;
@@ -56,6 +60,7 @@ li {
     padding: 15px;
     position: relative;
     &:hover {
+      background-color: #56C9F9;
       text-decoration: none;
     }
   }
@@ -90,11 +95,9 @@ li {
 }
 
 .event-post-date {
-
 }
 
 .event-post-content {
-
 }
 
 .event-desc-textarea-box {
