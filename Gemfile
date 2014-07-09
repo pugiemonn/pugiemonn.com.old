@@ -52,6 +52,13 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+
+  gem 'better_errors'
+  gem 'bullet'
+  gem 'quiet_assets'
+  gem 'rack-mini-profiler'
+  gem 'rails-footnotes'
+  gem 'rails_view_annotator'
 end
 
 group :production do
