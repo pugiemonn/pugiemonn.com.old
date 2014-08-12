@@ -57,6 +57,7 @@ group :development, :test do
   gem 'bullet'
   gem 'quiet_assets'
   gem 'rack-mini-profiler'
+  gem 'rails_best_practices'
   gem 'rails-footnotes'
   gem 'rails_view_annotator'
 end
