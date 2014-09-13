@@ -8,6 +8,7 @@ group :development do
   gem 'sqlite3'
 end
 gem 'devise'
+gem "rails_admin"
 
 gem 'thin'
 
