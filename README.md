@@ -8,7 +8,7 @@ pugiemonn.com's mission is to change the world.
 Like Doorkeeper or Mixi, it makes communicating and collaborating with your friends easier.
 
 # Introduction
-Hi test
+Pugiemonn.com is networking service.
 
 # Theme Color
 green
