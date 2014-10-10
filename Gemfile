@@ -56,6 +56,7 @@ group :development, :test do
 
   gem 'better_errors'
   gem 'bullet'
+  gem 'pry-rails'
   gem 'quiet_assets'
   gem 'rack-mini-profiler'
   gem 'rails_best_practices'
