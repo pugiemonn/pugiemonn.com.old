@@ -1,5 +1,14 @@
 node_modules
-dist
+www
 .tmp
 .sass-cache
-bower_components
+app/lib
+coverage
+platforms
+plugins
+*.swp
+*.swo
+*.log
+*.DS_Store
+
+app/scripts/config.js
