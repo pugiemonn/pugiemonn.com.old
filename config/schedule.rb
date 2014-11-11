@@ -18,3 +18,8 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+# APIのデータを取得
+every :day, at: "7:00am" do
+  runner "Batch::GetApi.get_api"
+end
