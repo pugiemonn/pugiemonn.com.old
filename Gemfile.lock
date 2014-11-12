@@ -63,6 +63,8 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    events_jp (0.0.3)
+      hashie
     execjs (2.2.1)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
@@ -73,6 +75,7 @@ GEM
       railties (>= 3.2, < 5.0)
     haml (4.0.5)
       tilt
+    hashie (3.3.1)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (1.5.3)
@@ -241,6 +244,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   devise
+  events_jp
   factory_girl_rails
   jbuilder (~> 1.2)
   jquery-rails
