@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140913071311) do
+ActiveRecord::Schema.define(version: 20141214164959) do
 
   create_table "admin_users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -61,6 +61,17 @@ ActiveRecord::Schema.define(version: 20140913071311) do
     t.datetime "updated_at"
     t.boolean  "flag"
     t.integer  "user_id"
+    t.string   "service"
+    t.decimal  "longitude"
+    t.decimal  "latitude"
+    t.string   "event_url"
+    t.string   "address"
+    t.datetime "started_at"
+    t.datetime "ended_at"
+    t.string   "place"
+    t.integer  "limit",         default: 0
+    t.integer  "accepted",      default: 0
+    t.integer  "waiting",       default: 0
   end
 
   add_index "events", ["community_id"], name: "index_events_on_community_id"
