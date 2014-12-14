@@ -1,6 +1,7 @@
 class Batch::GetApi
   def self.get_api
     # API を取得する処理
+    event_array = []
     events = EventsJp.get_events(service_limit: 20)
     events.each do |e|
       puts "イベントサイト - #{e.service}"
@@ -16,6 +17,8 @@ class Batch::GetApi
       puts "人数限界 - #{e.limit}"
       puts "accepted - #{e.accepted}"
       puts "待ち人数 - #{e.waiting}"
+      event_array << Event.new(title: "#{e.title}", service: "#{e.service}")
     end
+    Event.import event_array
   end
 end
