@@ -8,8 +8,8 @@ class AddColumnsToEvents < ActiveRecord::Migration
     add_column :events, :started_at, :datetime
     add_column :events, :ended_at, :datetime
     add_column :events, :place, :string
-    add_column :events, :limit, :integer
-    add_column :events, :accepted, :integer
-    add_column :events, :waiting, :integer
+    add_column :events, :limit, :integer, default: 0
+    add_column :events, :accepted, :integer, default: 0
+    add_column :events, :waiting, :integer, default: 0
   end
 end

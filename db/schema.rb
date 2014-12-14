@@ -69,9 +69,9 @@ ActiveRecord::Schema.define(version: 20141214164959) do
     t.datetime "started_at"
     t.datetime "ended_at"
     t.string   "place"
-    t.integer  "limit"
-    t.integer  "accepted"
-    t.integer  "waiting"
+    t.integer  "limit",         default: 0
+    t.integer  "accepted",      default: 0
+    t.integer  "waiting",       default: 0
   end
 
   add_index "events", ["community_id"], name: "index_events_on_community_id"
