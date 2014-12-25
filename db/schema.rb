@@ -62,13 +62,14 @@ ActiveRecord::Schema.define(version: 20141214164959) do
     t.boolean  "flag"
     t.integer  "user_id"
     t.string   "service"
-    t.decimal  "longitude"
-    t.decimal  "latitude"
     t.string   "event_url"
+    t.text     "catch"
     t.string   "address"
     t.datetime "started_at"
     t.datetime "ended_at"
     t.string   "place"
+    t.decimal  "lon"
+    t.decimal  "lat"
     t.integer  "limit",         default: 0
     t.integer  "accepted",      default: 0
     t.integer  "waiting",       default: 0
