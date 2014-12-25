@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 20141214164959) do
     t.integer  "community_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "flag"
     t.integer  "user_id"
     t.string   "service"
     t.string   "event_url"
