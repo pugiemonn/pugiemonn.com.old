@@ -21,7 +21,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
 
     if user_signed_in?
-      @member = Member.new(event_id: @event.id, user_id: current_user.id)
+      #@member = Member.new(event_id: @event.id, user_id: current_user.id)
       #logger.debug(@member)
     end
   end

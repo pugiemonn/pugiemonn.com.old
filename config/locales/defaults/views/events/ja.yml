@@ -6,8 +6,14 @@ ja:
     new:
     show:
       absence: 欠席
+      address: 住所
       attendance: 参加
       attendance_message: あなたはイベントに参加しています。
       attend_members: 参加者
       comment: コメント
+      catch: イベントメッセージ
+      date: 開催日時
+      event_url: イベントURL
       login_and_attend: ログインして参加する
+      number: 人数
+      place: 場所
